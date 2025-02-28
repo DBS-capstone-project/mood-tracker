@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Daily Mood Tracker</title>
+  <link rel="stylesheet" href="/styles/mood.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Add Your Daily Mood</h2>
+    <p>Set Your Mood Today.</p>
+
+    <!-- Date -->
+    <label for="currentDate">Today's date:</label>
+    <input id="currentDate" type="text" readonly />
+
+    <!-- Mood Selection -->
+    <label>What's your mood today? <span>*</span></label>
+    <div class="mood-options">
+      <div class="mood-option" data-mood="Bad">
+        <img src="/assets/bad icon.png" alt="Bad mood emoji" />
+      </div>
+      <div class="mood-option" data-mood="Poor">
+        <img src="/assets/poor icon.png" alt="Poor mood emoji" />
+      </div>
+      <div class="mood-option" data-mood="Average">
+        <img src="/assets/average icon.png" alt="Average mood emoji" />
+      </div>
+      <div class="mood-option" data-mood="Good">
+        <img src="/assets/good icon.png" alt="Good mood emoji" />
+      </div>
+      <div class="mood-option" data-mood="Excellent">
+        <img src="/assets/excellent  icon.png" alt="Excellent mood emoji" />
+      </div>
+    </div>
+
+    <!-- Progress Input -->
+    <label>Your Reason <span>*</span></label>
+    <textarea id="progressInput" placeholder="What makes you have that mood today ? :"></textarea>
+
+    <!-- Submit Button -->
+    <button id="submitButton">Submit Daily Mood</button>
+
+    <!-- Graph Section -->
+    <h3>Mood Trend Over Time</h3>
+    <canvas id="moodChart" width="400" height="200"></canvas>
+
+    <button id="clearButton">Clear All Data</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="mood.js"></script>
+</body>
+</html>
